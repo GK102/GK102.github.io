@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tmux new-session -d -s foo 'exec pfoo'
+tmux new-session -d -s foo 
 tmux send-keys 'bundle exec thin start' 'C-m'
 tmux rename-window 'Foo'
 tmux select-window -t foo:0
