@@ -1,6 +1,7 @@
 #!/bin/bash
-tmux split-window -h
-tmux split-window -h
-tmux select-layout even-horizontal
-tmux split-window -v
-tmux select-pane -t 0
+tmux new -s tail_log -d
+tmux split-window -v -t tail_log
+tmux split-window -v -t tail_log
+tmux split-window -v -t tail_log
+tmux select-layout -t tail_log even-vertical
+tmux attach -t tail_log
