@@ -1,7 +1,7 @@
 #!/bin/bash
 tmux
 sleep 1
-tmux attach -t 2
+tmux attach -t 0
 tmux split-window -h
 tmux split-window -h
 tmux select-layout even-horizontal
