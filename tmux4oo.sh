@@ -1,5 +1,5 @@
 #!/bin/bash
-tmux
+tmux new-session -d 
 sleep 1
 tmux attach -t 2
 tmux split-window -h
