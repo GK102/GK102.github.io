@@ -1,9 +1,10 @@
 #!/bin/bash
-tmux new-session -d 
-sleep 1
-tmux attach -t 2
-tmux split-window -h
-tmux split-window -h
-tmux select-layout even-horizontal
+tmux new-window -a -n WinSplit
+tmux new-session -d -s WinSplit
+tmux selectp -t WinSplit
 tmux split-window -v
-tmux select-pane -t 0
+tmux set-window-option -g window-status-current-bg blue
+tmux split-window -v
+tmux split-window -v
+tmux select-layout even-vertical
+tmux attach -t WinSplit
