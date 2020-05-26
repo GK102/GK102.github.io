@@ -1,8 +1,6 @@
 #!/bin/bash
 
-tmux new-session -d -s foo
-tmux split-window -h
-tmux split-window -h
-tmux select-layout even-horizontal
-tmux split-window -v
-tmux select-pane -t 0
+tmux new-session -d -s htop-session 'htop';  # start new detached tmux session, run htop
+tmux split-window;                             # split the detached tmux session
+tmux send 'htop -t' ENTER;                     # send 2nd command 'htop -t' to 2nd pane. I believe there's a `--target` option to target specific pane.
+tmux a;                                        # open (attach) tmux session.
