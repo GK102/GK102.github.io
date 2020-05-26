@@ -1,12 +1,8 @@
 #!/bin/bash
 
 tmux new-session -d  
-tmux send-keys 
-tmux rename-window 
-tmux select-window -t 
 tmux split-window -h
-tmux send-keys 
-tmux split-window -v 
-tmux send-keys 
-tmux split-window -v 
-
+tmux split-window -h
+tmux select-layout even-horizontal
+tmux split-window -v
+tmux select-pane -t 0
