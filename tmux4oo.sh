@@ -1,4 +1,5 @@
 #!/bin/bash
+tmux
 tmux split-window -h
 tmux split-window -h
 tmux select-layout even-horizontal
